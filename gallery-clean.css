@@ -1,0 +1,52 @@
+body {
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.gallery-container h1 {
+	text-align: center;
+	margin-top: 70px;
+}
+
+.gallery-container p.page-description {
+    text-align: center;
+	padding: 10px 40px;
+    margin: 10px auto;
+	margin-bottom: 0px;
+ }
+
+/* Styles for the gallery */
+
+.tz-gallery {
+    padding: 22px 40px;
+	padding-bottom: 1px;
+}
+
+.tz-gallery .thumbnail {
+    padding: 0;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.tz-gallery img {
+    border-radius: 2px;
+}
+
+.tz-gallery .caption{
+/*   padding: 26px 30px; */
+    text-align: center;
+}
+
+.tz-gallery .caption h3 {
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.tz-gallery .caption p {
+    font-size: 11px;
+    margin: 0;
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}

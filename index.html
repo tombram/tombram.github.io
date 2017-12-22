@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tom Bramhill</title>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+	
+    <link rel="stylesheet" href="gallery-clean.css">
+	
+<style>
+section {
+  padding-top: 130px;
+  margin-top: -130px;
+}
+.padding-top {
+  padding-top: 130px;
+}
+.container {
+	width: 80%;
+}
+.navbar {
+    overflow: hidden;
+	background-color: white;
+	position: fixed; /* Set the navbar to fixed position */
+    top: 05px; /* Position the navbar at the top of the page */
+    width: 95%; /* Full width */
+	width: 100%;
+	border-radius: 0px;
+	margin-left: 2.5%;
+	margin-left: 5%;
+	margin: auto;
+	padding-top: 46px;
+	padding-left: 3%; 
+	padding-top: 55px;
+	padding-bottom: 20px;
+	opacity: 0.9;
+	z-index: 2;
+	box-shadow: 0px 6px 10px #000a12;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+
+}
+.navbar-other {
+	display: none;
+    overflow: hidden;
+	background-color: #000a12;
+	background-color: white;
+	position: fixed; /* Set the navbar to fixed position */
+    top: 0px; /* Position the navbar at the top of the page */
+    width: 100%;
+	border-radius: 0px;
+	margin-left: 2.5%;
+	margin-left: 5%;
+	margin: auto;
+	padding-top: 66px;
+	padding-left: 3%; 
+	padding-top: 10px;
+	padding-bottom: 10px;
+	opacity: 0.9;
+	z-index: 2;
+}
+.navbar-other:hover {
+	transition: 2s;
+	opacity: 1.0;
+}
+
+.navbar-other a {
+    float: left;
+    display: block;
+    color: #cbba83;
+	color: black;
+	color: #50858b:
+	font-size: 16px;
+	font-weight: 300;
+    text-align: center;
+    padding: 8px 8px;
+	text-decoration: none;
+}
+
+.navbar-other a:hover {
+    color: #ffffe5;
+	color: #cbba83;
+	transition: 1s;
+} 
+
+.navbar a:hover {
+    color: #cbba83;
+	transition: 1s;
+}
+.navbar-center {
+    overflow: hidden;
+	background-color: #000a12;
+	background-color: #50858b;
+	background-color: white;
+	position: fixed; /* Set the navbar to fixed position */
+    top: 00; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+	border-radius: 0px;
+	margin-left: 2.5%;
+	margin-left: 5%;
+	margin: auto;
+	padding-top: 2px;
+	padding-bottom: 3px;
+	opacity: 1.0;
+	z-index: 3;
+}
+.navbar-center h2 {
+	text-align: center;
+	color: #cbba83;
+	color: black;
+	display: block;
+	font-size: 30px;
+}
+.navbar-center a {
+	text-align: center;
+	color: #cbba83;
+	font-size: 22px;
+	text-decoration: none;
+}
+.navbar-center a:hover {
+    color: #ffffe5;
+	color: black;
+	transition: 1s;
+}
+.navbar:hover {
+	background-color: white;
+	transition: 2s;
+	opacity: 1.0;
+}
+
+	/* Links inside the navbar */
+.navbar a {
+    float: left;
+    display: block;
+    color: black;
+	font-size: 16px;
+	font-weight: 400;
+    text-align: center;
+    padding: 14px 16px;
+	text-decoration: none;
+}
+.bigword a{
+	float: left;
+	font-size: 20px;
+	font-family: 'Lato', 'Open Sans', helvetica, verdana, arial, sans-serif;
+}
+.blockpara {
+	position: static;
+	float: center;
+	margin-right: auto;
+	margin-left: auto;
+	right: 10%;
+	top: 40%;
+	background-color: #eeeeee;
+	opacity: 0.8%;
+	margin: 0px;
+	padding: 10px;
+	padding-right: 20px;
+	border-radius: 3px;
+	border: 2px double #000a12;
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.4); 
+	
+}
+.blockpara:hover {
+	background-color: #eeeeee;
+	background-color: #ffffe5;
+	transition: 1s;
+}
+.blockpara h3 {
+
+	font-size: 16px;
+	text-align: left;
+	color: black;
+	display: block;	
+	text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #cbba83;
+	transition: 1s;
+}
+@media (max-width: 910px) { 
+    .navbar {
+        display: none;
+    }
+	.navbar-other {
+		display: block;
+	} 
+	.gallery-container p.page-description {
+		padding: 10px 10px;
+	}
+	.tz-gallery {
+		padding: 10px 10px;
+}
+.img-shadows {
+	border-radius: 2px;
+	border: 2px double #000a12;
+ } 
+} 
+.biorow {
+	background-color: #eeeeee;
+	background-color: white;
+}
+h1 {
+	font-size: 24px;
+}
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<!--<script>
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 800);
+        return false;
+      }
+    }
+  });
+});
+</script>
+<!-- End of SMOOTH SCROLL -->
+</head>
+<body>
+<div class="navbar-center">
+  <h2><a href="#moderngallery">Tom Bramhill - Artist</a></h2>
+</div>
+<div class="navbar">
+  <a href="#moderngallery">Tom Bramhill</a>
+  <a href="#moderngallery">The Modern Landscape</a>
+  <a href="#portraitgallery">Portraits</a>
+  <a href="#sculpturegallery">Sculpture</a>
+  <a href="#biography">Biography</a>
+  <a href="#contact">Contact</a>
+</div>
+<div class="navbar-other">
+  <a href="#moderngallery">The Modern Landscape</a>
+  <a href="#portraitgallery">Portraits</a>
+  <a href="#sculpturegallery">Sculpture</a>
+  <a href="#biography">Biography</a>
+  <a href="#contact">Contact</a>
+</div>
+<a id="moderngallery"></a> 
+<div class="container padding-top">
+<div class="row biorow">
+	<div class="col-xs-6">
+	     <h1>The Modern Landscape</h1><br>
+		<p>These landscapes are neither realistic, impressionistic, abstract or folk art. </p><br><p>They are modern landscapes, and reflect the way we see landscapes today, usually rushed, with life existing mainly at the horizen. Perspective and colors are taken in quickly leaving a mixed bag of impressions of pattern and detail and colors. </p><br>
+					
+    </div>
+	<div class="col-xs-6">
+	<img class="img-responsive img-shadows" src="./images/s9.jpg">
+	</div>
+</div>
+</div>
+<a id="portraitgallery"></a> 
+<div class="container padding-top">
+<div class="row biorow">
+	<div class="col-xs-6">
+	     <h1>Portraits</h1><br>
+		<p>In portraiture I’m primarily self-taught. </p><br><p>I attended the workshops of Ray Kinstler at the Art Students League in New York, and with Charles Sovek in Massachusetts. I have taught a very limited number of workshops in Knowlton, Quebec, including a course in portraiture at Bishops University (Knowlton Campus) Quebec.</p><br><p>I no longer accept portrait commisions.</p><br>
+					
+    </div>
+	<div class="col-xs-6">
+	<img class="img-responsive img-shadows" src="./images/banner3.JPG">
+	</div>
+</div>
+
+    <p class="page-description text-center"></p>
+    <div class="gallery-container"> 
+	<br><br><br>
+    <div class="tz-gallery">
+
+        <div class="row">
+
+            <div class="col-xs-3">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/p2.jpg">
+                        <img class="img-shadows" src="./images/p2.jpg" alt="pic">
+                    </a>
+                    <div class="caption">
+                        <h3>Portrait of James</h3>
+                        <p>40 x 34</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/p1.jpg">
+                        <img class="img-shadows" src="./images/p1.jpg" alt="pic">
+                    </a>
+                    <div class="caption">
+                        <h3>Gordon K Russell</h3>
+                        <p>38 x 36</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/p3.jpg">
+                        <img class="img-shadows"  src="./images/p3.jpg" alt="pic">
+                    </a>
+                    <div class="caption">
+                        <h3>Weldon Tracey</h3>
+                        <p>28 x 22</p>
+                    </div>
+                </div>
+            </div>
+			<div class="col-xs-3">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/p4.jpg">
+                        <img class="img-shadows" src="./images/p4.jpg" alt="pic">
+                    </a>
+                    <div class="caption">
+                        <h3>Art Dealer C. Klimantaris</h3>
+                        <p>30 x 22</p>
+                    </div>
+                </div>
+            </div>
+			</div>
+			<div class="row">
+            <div class="col-xs-3">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/p5.jpg">
+                        <img class="img-shadows" src="./images/p5.jpg" alt="pic">
+                    </a>
+                    <div class="caption">
+                        <h3>Self Portrait</h3>
+                        <p>In the style of Sir Henry Raeburn</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/p6.jpg">
+                        <img class="img-shadows" src="./images/p6.jpg" alt="pic">
+                    </a>
+                    <div class="caption">
+                        <h3>Live Model</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        
+		     <div class="col-xs-3">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/p12.jpg">
+                        <img class="img-shadows"  src="./images/p12.jpg" alt="pic">
+                    </a>
+                    <div class="caption">
+                        <h3>Live Model</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/p8.jpg">
+                        <img class="img-shadows"  src="./images/p8.jpg" alt="pic">
+                    </a>
+                    <div class="caption">
+                        <h3>Self Portrait</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+			</div>
+            <div class="col-xs-3">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/p9.jpg">
+                        <img class="img-shadows"  src="./images/p9.jpg" alt="pic">
+                    </a>
+                    <div class="caption">
+                        <h3>Leonard Cohen</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/p10.jpg">
+                        <img class="img-shadows"  src="./images/p10.jpg" alt="pic">
+                    </a>
+                    <div class="caption">
+                        <h3>Donald Sutherland</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/p11.jpg">
+                        <img class="img-shadows"  src="./images/p11.jpg" alt="pic">
+                    </a>
+                    <div class="caption">
+                        <h3>Woody Allen</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/p7.jpg">
+                        <img class="img-shadows" src="./images/p7.jpg" alt="pic">
+                    </a>
+                    <div class="caption">
+                        <h3>Harrison Ford</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+		</div>
+
+    </div>
+
+    
+
+
+
+<a id="sculpturegallery"></a> 
+<div class="container padding-top">
+<div class="row biorow">
+	<div class="col-xs-8">
+	     <h1>Sculpting the Head</h1><br>
+		 <p> Portrait painting is just like sculpting but in 2D. Yet the dominant dimension of any head is its depth – front to back. It’s the dimension easiest for the painter to lose in his depictions...</p>
+		<p>The nose bridge to the corner of the eye, the inside corner to the outside corner of the eye, the muzzle to the earhole, the upper lip in profile to the lower lip, and on . . .,</p>
+		<p>Nothing beats a quick, even rough head study in clay. It never fails to impress me with how dramatic these receding differences actually are in all of us. In the same vein I stress the premier coup or alla prima approach to head studies.</p>
+
+    </div>
+	<div class="col-xs-4">
+	<img class="img-responsive img-shadows" src="./images/s4.jpg">
+	</div>
+</div>
+<div class="gallery-container"> 
+<br><br><br>
+    
+    <div class="tz-gallery">
+	        <div class="row">
+
+            <div class="col-xs-3">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/s1.jpg">
+                        <img class="img-shadows" src="./images/s1.jpg" alt="pic">
+                    </a>
+                    <div class="caption">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/s2.jpg">
+                        <img class="img-shadows" src="./images/s2.jpg" alt="pic">
+                    </a>
+                    <div class="caption">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/s3.jpg">
+                        <img class="img-shadows"  src="./images/s3.jpg" alt="pic">
+                    </a>
+                    <div class="caption">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/s5.jpg">
+                        <img class="img-shadows" src="./images/s5.jpg" alt="pic">
+                    </a>
+                    <div class="caption">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+			</div>
+			<div class="row">
+            <div class="col-xs-3">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/s6.jpg">
+                        <img class="img-shadows"  src="./images/s6.jpg" alt="pic">
+                    </a>
+                    <div class="caption">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+				</div>
+				<div class="col-xs-3">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/s7.jpg">
+                        <img class="img-shadows" src="./images/s7.jpg" alt="pic">
+                    </a>
+                    <div class="caption">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/s8.jpg">
+                        <img class="img-shadows" src="./images/s8.jpg" alt="pic">
+                    </a>
+                    <div class="caption">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/s9.jpg">
+                        <img class="img-shadows" src="./images/s9.jpg" alt="pic">
+                    </a>
+                    <div class="caption">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xa-12">
+                <div class="thumbnail">
+                    <a class="lightbox" href="./images/s10.jpg">
+                        <img class="img-shadows" src="./images/s10.jpg" alt="pic">
+                    </a>
+                    <div class="caption">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        
+
+    </div>
+
+</div>
+
+</div>
+</div>
+<a id="biography"></a>
+<div class="container padding-top">
+<div class="row biorow">
+	<div class="col-xs-6">
+	     <h1>Biography</h1><br>
+		<p>My first career was spent in advertising and design in Montreal and Toronto, and culminated with my own product design and consumer research consultancy in Toronto in the 80’s and 90’s.</p>
+		<p>Prior to these Modern Landscapes, I dabbled in realism quite successfully via in Portaiture and Sculpture.</p>
+		<br>
+					
+    </div>
+	<div class="col-xs-6">
+	<img class="img-responsive img-shadows" src="./images/banner3.JPG">
+	</div>
+</div>
+
+<a id="artist"></a> 
+<br><br><br><br><br><br><br>
+<div class="row biorow">
+	<div class="col-xs-6">
+	<img class="img-responsive img-shadows" src="./images/banner4.jpg">
+	</div>
+	<div class="col-xs-6">
+	<h1>Artist Statement</h1>
+	<br>
+		<p>"Wherever originality comes to the fore there is a chance for beauty. One can love the look of Hals or Raeburn, and at the same time admire the portraits of Schiele and van Gogh. But originality remains the shining coin in the sand that turns our head and fills us with hope."<p/><br>
+		</p><br>
+	</div>
+	
+ </div>
+<a id="contact"></a>
+<div class="container padding-top">
+	     <div>
+		<div class="blockpara">
+		<br>
+        <h3>INQUIRIES: &nbsp; (647)&nbsp; 793-1741</h3>
+		<h3>bramhill@gmx.com</h3>
+		<br>
+        </div> 
+
+		</div>		
+    </div> 
+</div>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>
+</body>
+</html>
